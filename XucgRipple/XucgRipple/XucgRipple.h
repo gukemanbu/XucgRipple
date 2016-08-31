@@ -4,7 +4,7 @@
 //
 //  Created by xucg on 8/31/16.
 //  Copyright © 2016 xucg. All rights reserved.
-//
+//  Welcome visiting https://github.com/gukemanbu
 
 #import <UIKit/UIKit.h>
 
