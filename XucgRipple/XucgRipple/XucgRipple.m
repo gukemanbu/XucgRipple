@@ -27,8 +27,6 @@
         
         _rippleCount = 5;
         _rippleDuration = 3;
-        
-        self.layer.cornerRadius = minRadius;
     }
     
     return self;
@@ -39,7 +37,7 @@
     for (int i = 0; i<_rippleCount; i++) {
         CALayer * pulsingLayer = [CALayer layer];
         pulsingLayer.frame = CGRectMake(0, 0, _maxRadius*2, _maxRadius*2);
-        pulsingLayer.position = CGPointMake(_minRadius, _minRadius);
+        pulsingLayer.position = CGPointMake(self.bounds.size.width/2, self.bounds.size.width/2);
         if (!_rippleColor) {
             _rippleColor = [UIColor colorWithWhite:1 alpha:0.7];
         }
@@ -95,6 +93,12 @@
     UIImageView *tmpImgView = [self imageView];
     tmpImgView.frame = newFrame;
     tmpImgView.layer.cornerRadius = imageSize.width / 2;
+}
+
+- (void) setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    
+    self.layer.cornerRadius = self.bounds.size.width / 2;
 }
 
 @end

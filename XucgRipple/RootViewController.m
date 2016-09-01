@@ -20,7 +20,7 @@
     
     CGFloat maxRadius = [UIScreen mainScreen].bounds.size.width / 2;
     
-    XucgRipple *rippleView = [[XucgRipple alloc] initMinRadius:65 maxRadius:maxRadius];
+    XucgRipple *rippleView = [[XucgRipple alloc] initMinRadius:30 maxRadius:maxRadius];
     rippleView.rippleCount = 5;
     rippleView.rippleDuration = 3;
     rippleView.backgroundColor = [UIColor redColor];
