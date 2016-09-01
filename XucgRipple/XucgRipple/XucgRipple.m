@@ -40,7 +40,10 @@
         CALayer * pulsingLayer = [CALayer layer];
         pulsingLayer.frame = CGRectMake(0, 0, _maxRadius*2, _maxRadius*2);
         pulsingLayer.position = CGPointMake(_minRadius, _minRadius);
-        pulsingLayer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7].CGColor;
+        if (!_rippleColor) {
+            _rippleColor = [UIColor colorWithWhite:1 alpha:0.7];
+        }
+        pulsingLayer.backgroundColor = [_rippleColor CGColor];
         pulsingLayer.cornerRadius = _maxRadius;
         
         CAMediaTimingFunction * defaultCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];

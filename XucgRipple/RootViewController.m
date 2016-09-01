@@ -20,15 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    XucgRipple *redView = [[XucgRipple alloc] initMinRadius:65 maxRadius:207];
-    redView.rippleCount = 5;
-    redView.rippleDuration = 3;
-    redView.backgroundColor = [UIColor redColor];
-    redView.image = [UIImage imageNamed:@"mzd.jpg"];
+    CGFloat maxRadius = [UIScreen mainScreen].bounds.size.width / 2;
+    
+    XucgRipple *rippleView = [[XucgRipple alloc] initMinRadius:65 maxRadius:maxRadius];
+    rippleView.rippleCount = 5;
+    rippleView.rippleDuration = 3;
+    rippleView.backgroundColor = [UIColor redColor];
+    rippleView.image = [UIImage imageNamed:@"mzd.jpg"];
+    rippleView.rippleColor = [UIColor redColor];
     CGFloat x = ([UIScreen mainScreen].bounds.size.width - 130) / 2;
-    redView.frame = CGRectMake(x, 200, 130, 130);
-    [self.view addSubview:redView];
-    [redView startAnimation];
+    rippleView.frame = CGRectMake(x, 200, 130, 130);
+    [self.view addSubview:rippleView];
+    [rippleView startAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
