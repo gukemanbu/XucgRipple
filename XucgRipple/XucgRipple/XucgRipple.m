@@ -43,6 +43,8 @@
         }
         pulsingLayer.backgroundColor = [_rippleColor CGColor];
         pulsingLayer.cornerRadius = _maxRadius;
+        pulsingLayer.borderColor = [_borderColor CGColor];
+        pulsingLayer.borderWidth = _borderWidth;
         
         CAMediaTimingFunction * defaultCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
         

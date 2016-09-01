@@ -27,6 +27,8 @@
     rippleView.image = [UIImage imageNamed:@"mzd.jpg"];
     rippleView.imageSize = CGSizeMake(130, 130);
     rippleView.rippleColor = [UIColor redColor];
+    rippleView.borderWidth = 2;
+    rippleView.borderColor = [UIColor greenColor];
     CGFloat x = ([UIScreen mainScreen].bounds.size.width - 130) / 2;
     rippleView.frame = CGRectMake(x, 200, 130, 130);
     [self.view addSubview:rippleView];
