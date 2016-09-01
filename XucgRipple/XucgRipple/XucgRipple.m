@@ -56,7 +56,7 @@
         animationGroup.timingFunction = defaultCurve;
         
         CABasicAnimation * scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        scaleAnimation.fromValue = @(_minRadius*2 / 414);
+        scaleAnimation.fromValue = @(_minRadius*2 / _maxRadius);
         scaleAnimation.toValue = @1.0;
         
         CAKeyframeAnimation * opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
