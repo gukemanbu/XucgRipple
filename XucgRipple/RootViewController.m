@@ -11,8 +11,6 @@
 
 @interface RootViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *greenView;
-
 @end
 
 @implementation RootViewController
@@ -27,6 +25,7 @@
     rippleView.rippleDuration = 3;
     rippleView.backgroundColor = [UIColor redColor];
     rippleView.image = [UIImage imageNamed:@"mzd.jpg"];
+    rippleView.imageSize = CGSizeMake(130, 130);
     rippleView.rippleColor = [UIColor redColor];
     CGFloat x = ([UIScreen mainScreen].bounds.size.width - 130) / 2;
     rippleView.frame = CGRectMake(x, 200, 130, 130);

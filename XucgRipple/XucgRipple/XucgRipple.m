@@ -56,7 +56,7 @@
         animationGroup.timingFunction = defaultCurve;
         
         CABasicAnimation * scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        scaleAnimation.fromValue = @(_minRadius*2 / _maxRadius);
+        scaleAnimation.fromValue = @(_minRadius / _maxRadius);
         scaleAnimation.toValue = @1.0;
         
         CAKeyframeAnimation * opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
@@ -76,9 +76,7 @@
 - (UIImageView*)imageView {
     if (!_imageView) {
         _imageView = [[UIImageView alloc] init];
-        _imageView.frame = CGRectMake(0, 0, _minRadius*2, _minRadius*2);
         _imageView.backgroundColor = self.backgroundColor;
-        _imageView.layer.cornerRadius = _minRadius;
         _imageView.layer.masksToBounds = YES;
     }
     
@@ -86,7 +84,17 @@
 }
 
 - (void)setImage:(UIImage *)image {
-    [[self imageView] setImage:image];
+    UIImageView *tmpImgView = [self imageView];
+    [tmpImgView setImage:image];
+    tmpImgView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+    tmpImgView.layer.cornerRadius = image.size.width / 2;
+}
+
+- (void)setImageSize:(CGSize)imageSize {
+    CGRect newFrame = CGRectMake(0, 0, imageSize.width, imageSize.height);
+    UIImageView *tmpImgView = [self imageView];
+    tmpImgView.frame = newFrame;
+    tmpImgView.layer.cornerRadius = imageSize.width / 2;
 }
 
 @end

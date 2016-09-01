@@ -11,6 +11,7 @@
 @interface XucgRipple : UIView
 
 @property (nonatomic, strong) UIImage   *image;          // 图像
+@property (nonatomic, assign) CGSize    imageSize;       // 图像大小，默认为原始图像大小
 @property (nonatomic, assign) NSInteger rippleCount;     // 脉冲数量
 @property (nonatomic, assign) CGFloat   rippleDuration;  // 脉冲时间
 @property (nonatomic, strong) UIColor   *rippleColor;    // 脉冲颜色
