@@ -22,7 +22,7 @@
     
     XucgRipple *rippleView = [[XucgRipple alloc] initMinRadius:30 maxRadius:maxRadius];
     rippleView.rippleCount = 5;
-    rippleView.rippleDuration = 3;
+    rippleView.rippleDuration = 4;
     rippleView.backgroundColor = [UIColor redColor];
     rippleView.image = [UIImage imageNamed:@"mzd.jpg"];
     rippleView.imageSize = CGSizeMake(130, 130);
