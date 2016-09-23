@@ -1,4 +1,4 @@
 # XucgRipple
 水波扩散特效！
 
-https://github.com/gukemanbu/XucgRipple/mzd.gif
+![image](https://github.com/gukemanbu/XucgRipple/mzd.gif)
